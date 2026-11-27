@@ -1,0 +1,17 @@
+{
+  "name": "sang-mil-portfolio",
+  "version": "1.0.0",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "marked": "^18.3.0"
+  },
+  "private": true,
+  "type": "module"
+}

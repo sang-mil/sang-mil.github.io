@@ -1,4 +1,112 @@
----
-layout: home
-# Index page
----
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>조상혁 | 포트폴리오</title>
+<meta name="description" content="조상혁 · 국민대학교 소프트웨어학과 2학년. 새로운 소식을 빠르게 접하고 무엇이든 만들어보는 사람.">
+<meta property="og:title" content="조상혁 | 포트폴리오">
+<meta property="og:description" content="조상혁 · 국민대학교 소프트웨어학과 2학년. 새로운 소식을 빠르게 접하고 무엇이든 만들어보는 사람.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topnav">
+  <nav><a href="/">포트폴리오</a><a href="/blog/">블로그</a></nav>
+</header>
+<main>
+<section id="hero">
+  <h1>조상혁</h1>
+  <p class="affiliation">국민대학교 소프트웨어학과 2학년</p>
+  <p class="tagline">새로운 소식을 빠르게 접하고 무엇이든 만들어보는 사람</p>
+  <p class="sub">2023년부터 계속 만들고 있어요</p>
+</section>
+<section id="erp">
+  <h2>외주 경험</h2>
+  <article class="card card-feature">
+    <h3>기업용 ERP 외주 개발</h3>
+    <p class="meta">2026년 7월 ~ 현재 · 테스트 배포 중 · 피드백 수집 후 완성 예정</p>
+    <p>디자인 · 프론트엔드 · 백엔드 전 과정을 혼자 담당</p>
+    <ul class="features"><li>재고 관리</li><li>A/S 관리</li><li>이슈 관리</li><li>문자 발송 관리</li></ul>
+    <ul class="tags"><li>Next.js</li><li>Flask</li><li>MySQL</li></ul>
+    <p class="note">🔒 고객사 프로젝트라 코드는 비공개</p>
+  </article>
+</section>
+<section id="projects">
+  <h2>대표 프로젝트</h2>
+  <article class="card">
+    <h3>mwomeog</h3>
+    <p>뭐 먹을지 지도를 보고 결정하는 맛집 선택 서비스.</p>
+    <ul class="tags"><li>Next.js</li><li>TypeScript</li></ul>
+    <p class="links"><a href="https://mwomeog.vercel.app" target="_blank" rel="noopener noreferrer">라이브</a> · <a href="https://github.com/sang-mil/mwomeog" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>Sugar Rush</h3>
+    <p>디저트 파이터가 싸우는 실시간 PvP 아케이드 게임. 캐릭터 4종, AI 봇, 온라인 모드.</p>
+    <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>Canvas</li><li>WebSocket</li></ul>
+    <p class="links"><a href="https://suger-rush.vercel.app" target="_blank" rel="noopener noreferrer">플레이</a> · <a href="https://github.com/sang-mil/sugerRush" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>Career Tactics</h3>
+    <p>KIT 바이브코딩 공모전 출품작. Gemini가 만든 세계관 속 퀘스트로 성향을 분석하고 직업을 추천하는 진로 탐색 앱.</p>
+    <ul class="tags"><li>React</li><li>TypeScript</li><li>Gemini API</li><li>Firebase</li></ul>
+    <p class="links"><a href="https://career-tactics.vercel.app" target="_blank" rel="noopener noreferrer">라이브</a> · <a href="https://github.com/sang-mil/career-tactics" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>Notion Travel Bridge</h3>
+    <p>Notion에 적은 여행 계획을 Gemini로 구조화해 Google 지도 핀으로 만들고, 지도 링크를 다시 Notion에 기록하는 Windows 자동화 도구.</p>
+    <ul class="tags"><li>Python</li><li>Gemini API</li><li>Notion API</li><li>Playwright</li></ul>
+    <p class="links"><a href="https://github.com/sang-mil/notion_travel_bridge" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+</section>
+<section id="more">
+  <h2>더 보기</h2>
+  <article class="card">
+    <h3>News for Me</h3>
+    <p>관심 주제의 뉴스를 모아 AI로 요약하고 개인 아카이브와 이메일 브리핑으로 보여 주는 뉴스룸.</p>
+    <ul class="tags"><li>React</li><li>TypeScript</li><li>Cloudflare Workers</li><li>Gemini API</li></ul>
+    <p class="links"><a href="https://github.com/sang-mil/news-for-me" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>Event-aware Maps</h3>
+    <p>잠실·올림픽공원에 행사가 겹치는 날, 어느 역과 노선으로 언제 이동하면 덜 붐비는지 알려 주는 이동 안내 서비스.</p>
+    <ul class="tags"><li>Python</li><li>정적 웹</li></ul>
+    <p class="links"><a href="https://github.com/sang-mil/event-aware-maps" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>prompt_up</h3>
+    <p>바이브코딩을 하기 위해 바이브코딩으로 만든 도구.</p>
+    <ul class="tags"><li>TypeScript</li></ul>
+    <p class="links"><a href="https://prompt-up-beta.vercel.app" target="_blank" rel="noopener noreferrer">라이브</a> · <a href="https://github.com/p0tat019/prompt_up" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>simulator</h3>
+    <p>팀 시뮬레이터 게임. 무료로 운영하려고 바이브코딩으로 만들었어요.</p>
+    <ul class="tags"><li>TypeScript</li></ul>
+    <p class="links"><a href="https://simulator-taupe-seven.vercel.app" target="_blank" rel="noopener noreferrer">플레이</a> · <a href="https://github.com/p0tat019/simulator" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+  <article class="card">
+    <h3>OnEat</h3>
+    <p>바이브코딩으로 만든 프로젝트.</p>
+    <ul class="tags"><li>TypeScript</li></ul>
+    <p class="links"><a href="https://on-eat.vercel.app" target="_blank" rel="noopener noreferrer">라이브</a> · <a href="https://github.com/p0tat019/OnEat" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+  </article>
+</section>
+<section id="timeline">
+  <h2>만들어 온 순서</h2>
+  <ol class="timeline">
+    <li><span class="year">2023</span><ul><li>Arduino</li><li>일기 프로젝트</li><li>파이썬 알고리즘 공부</li></ul></li>
+    <li><span class="year">2024</span><ul><li>C++ 스네이크 게임</li><li>SNS 프로젝트</li><li>지역 도시재생 프로젝트</li></ul></li>
+    <li><span class="year">2025</span><ul><li>바이브코딩 도구 만들기: prompt_up, simulator, OnEat, PC_Ai</li></ul></li>
+    <li><span class="year">2026</span><ul><li>mwomeog, Sugar Rush, Career Tactics, Notion Travel Bridge</li><li>News for Me, Event-aware Maps</li><li>기업용 ERP 외주 (7월~)</li></ul></li>
+  </ol>
+</section>
+<section id="contact">
+  <h2>연락처</h2>
+  <p><a href="mailto:sangmil6369@gmail.com">sangmil6369@gmail.com</a></p>
+  <p class="links"><a href="https://github.com/sang-mil" target="_blank" rel="noopener noreferrer">GitHub · sang-mil</a> · <a href="https://github.com/p0tat019" target="_blank" rel="noopener noreferrer">GitHub · p0tat019</a></p>
+</section>
+</main>
+<footer><p>© 조상혁</p></footer>
+</body>
+</html>
