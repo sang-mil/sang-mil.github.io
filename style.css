@@ -103,3 +103,46 @@ footer { color: var(--muted); font-size: 0.85rem; padding-top: 28px; padding-bot
 .post-body pre { overflow-x: auto; padding: 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 0.9rem; }
 .post-body code { font-size: 0.92em; }
 .post-body blockquote { margin: 0 0 10px; padding-left: 14px; border-left: 3px solid var(--line); color: var(--muted); }
+
+/* motion: content is visible by default; effects apply only when JS is running (.js) */
+html { scroll-behavior: smooth; }
+
+.topnav { position: sticky; top: 0; z-index: 5; background: var(--bg); }
+
+.progress {
+  position: fixed; top: 0; left: 0; z-index: 10;
+  width: 100%; height: 3px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left;
+}
+
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes show { to { opacity: 1; } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.5); } 70%, 100% { box-shadow: 0 0 0 8px rgba(37, 99, 235, 0); } }
+
+.js .reveal { opacity: 0; }
+.js:not(.js-ready) .reveal { animation: show 0.01s linear 2.5s forwards; }
+.js .reveal.in { opacity: 1; animation: rise 0.55s ease var(--d, 0ms) backwards; }
+
+#hero > * { animation: rise 0.7s ease backwards; }
+#hero > :nth-child(2) { animation-delay: 0.08s; }
+#hero > :nth-child(3) { animation-delay: 0.16s; }
+#hero > :nth-child(4) { animation-delay: 0.24s; }
+
+.card { transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12); }
+.tags li { transition: color 0.2s ease, border-color 0.2s ease; }
+.card:hover .tags li { color: var(--accent); border-color: var(--accent); }
+
+.dot {
+  display: inline-block; width: 8px; height: 8px; margin-right: 8px;
+  border-radius: 50%; background: var(--accent); animation: pulse 1.8s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  #hero > * { animation: none; }
+  .js .reveal, .js .reveal.in { opacity: 1; transform: none; animation: none; transition: none; }
+  .card { transition: none; }
+  .card:hover { transform: none; }
+  .dot { animation: none; }
+}

@@ -27,9 +27,9 @@ export function renderHero(hero) {
 export function renderErp(erp) {
   return `<section id="erp">
   <h2>외주 경험</h2>
-  <article class="card card-feature">
+  <article class="card card-feature reveal">
     <h3>${e(erp.title)}</h3>
-    <p class="meta">${e(erp.period)} · ${e(erp.status)}</p>
+    <p class="meta"><span class="dot" aria-hidden="true"></span>${e(erp.period)} · ${e(erp.status)}</p>
     <p>${e(erp.role)}</p>
     <ul class="features">${erp.features.map((f) => `<li>${e(f)}</li>`).join('')}</ul>
     ${tags(erp.stack)}
@@ -41,7 +41,7 @@ export function renderErp(erp) {
 export function renderProjects(title, list, id = 'projects') {
   const cards = list
     .map(
-      (p) => `<article class="card">
+      (p) => `<article class="card reveal">
     <h3>${e(p.title)}</h3>
     <p>${e(p.summary)}</p>
     ${tags(p.stack)}
@@ -58,7 +58,7 @@ export function renderProjects(title, list, id = 'projects') {
 export function renderTimeline(timeline) {
   const rows = timeline
     .map(
-      (t) => `<li><span class="year">${e(t.year)}</span><ul>${t.items
+      (t) => `<li class="reveal"><span class="year">${e(t.year)}</span><ul>${t.items
         .map((i) => `<li>${e(i)}</li>`)
         .join('')}</ul></li>`,
     )

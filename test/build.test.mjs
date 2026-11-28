@@ -19,8 +19,11 @@ test('markup contains the name and tagline without running JS', () => {
   assert.ok(html.includes('새로운 소식을 빠르게 접하고 무엇이든 만들어보는 사람</p>'));
 });
 
-test('page has no script tag', () => {
-  assert.ok(!html.includes('<script'));
+test('only the enhancement script is loaded and content stays in the markup', () => {
+  const scripts = html.match(/<script[^>]*>/g) || [];
+  assert.deepEqual(scripts, ['<script>', '<script src="/enhance.js" defer>']);
+  assert.ok(html.includes("document.documentElement.classList.add('js')"));
+  assert.ok(html.includes('<h1>조상혁</h1>'));
 });
 
 test('page links style.css', () => {

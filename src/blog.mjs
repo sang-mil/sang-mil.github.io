@@ -29,7 +29,7 @@ export function renderBlogIndex(posts) {
   const items = sorted.length
     ? sorted
         .map(
-          (p) => `<article class="card">
+          (p) => `<article class="card reveal">
     <h3><a href="/blog/${e(p.slug)}/">${e(p.title)}</a></h3>
     <p class="meta">${e(p.date)}</p>
     ${p.summary ? `<p>${e(p.summary)}</p>` : ''}

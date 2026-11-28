@@ -19,8 +19,11 @@ export function layout({ title, description, body, name = content.hero.name }) {
 <meta property="og:description" content="${e(description)}">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/enhance.js" defer></script>
 </head>
 <body>
+<div class="progress" aria-hidden="true"></div>
 <header class="topnav">
   <nav><a href="/">포트폴리오</a><a href="/blog/">블로그</a></nav>
 </header>
